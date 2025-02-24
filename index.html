@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,78 +9,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;600&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <header class="navbar">
-        <div class="menu">
-          <div class="logo">
-            <a href="#"><img src="assets\logo.png" alt="Logo da Idiomus"></a>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#">Conteúdo</a></li>
-              <li><a href="#">Livros</a></li>
-              <li><a href="#">Programas</a></li>
-              <li><a href="#">Sobre nós</a></li>
-            </ul>
-          </nav>
+        <div class="container navbar__container">
+            <div class="menu">
+                <div class="logo">
+                    <h1 style="display:none">Idiomus</h1>
+                    <a href="#"><img src="assets\logo.png" alt="Logo da Idiomus"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Conteúdo</a></li>
+                        <li><a href="#">Livros</a></li>
+                        <li><a href="#">Programas</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="btn-acesso">Acessar Plataforma</button>
         </div>
-        <button class="btn-acesso">Acessar Plataforma</button>
-      </header>
-      
+    </header>
+
     <section class="hero">
-        <div class="hero-text">
-            <span class="tag">Método recomendado por poliglotas</span>
-            <h1>A plataforma bilíngue que te ensina <span>muito mais do que inglês</span></h1>
-            <p>Aprenda inglês de forma natural tendo os maiores líderes, artistas e ícones do mundo como seus professores.</p>
-            <button class="btn-hero">LIBERE SEU ACESSO À PLATAFORMA AQUI</button>
-            <p class="info">Processo de aprendizagem até <span>10x mais eficiente</span> e <span>10x mais barato</span>.</p>
-        </div>
-        <div class="hero-image">
-            <img src="assets\lightbox-image.png" alt="Imagem do Hero">
+        <div class="container container__hero">
+            <div class="hero-text">
+                <span class="tag">Método recomendado por poliglotas</span>
+                <h1>A plataforma bilíngue que te ensina <span>muito mais do que inglês</span></h1>
+                <p>Aprenda inglês de forma natural tendo os maiores líderes, artistas e ícones do mundo como seus
+                    professores.</p>
+                <button class="btn-hero">LIBERE SEU ACESSO À PLATAFORMA AQUI</button>
+                <p class="info">Processo de aprendizagem até <span>10x mais eficiente</span> e <span>10x mais
+                        barato</span>.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets\lightbox-image.png" alt="Imagem do Hero">
+            </div>
         </div>
     </section>
     <section class="second-fold">
-        <div class="left-column">
-            <h2>O mundo mudou. A forma de estudar inglês, também.</h2>
-        </div>
-        <div class="right-column">
-            <p>Ganhe mais dinheiro, cresça profissionalmente e melhore sua qualidade de vida. <span class="highlight-text">Estude inglês com um método efetivo e que respeita o seu tempo.</span></p>
+        <div class="container container__second-fold">
+            <div class="left-column">
+                <h2>O mundo mudou. A forma de estudar inglês, também.</h2>
+            </div>
+            <div class="right-column">
+                <p>Ganhe mais dinheiro, cresça profissionalmente e melhore sua qualidade de vida. <span
+                        class="highlight-text">Estude inglês com um método efetivo e que respeita o seu tempo.</span>
+                </p>
 
-            <section class="columns">
-                <div class="column">
-                    <div class="icon">🗣️</div>
-                    <h3>Fluência sem sofrimento</h3>
-                    <p>Liberte-se das metodologias tradicionais que transformaram por décadas a jornada da fluência em um processo doloroso, entediante e cansativo.</p>
-                </div>
-                <div class="column">
-                    <div class="icon">📚</div>
-                    <h3>Aprenda de verdade</h3>
-                    <p>Liberte-se de aplicativos que lhe fazem associar imagens entediantes com seus significados, como se você fosse uma criança de 5 anos.</p>
-                </div>
-            </section>
+                <section class="columns">
+                    <div class="column">
+                        <div class="icon">🗣️</div>
+                        <h3>Fluência sem sofrimento</h3>
+                        <p>Liberte-se das metodologias tradicionais que transformaram por décadas a jornada da fluência
+                            em um processo doloroso, entediante e cansativo.</p>
+                    </div>
+                    <div class="column">
+                        <div class="icon">📚</div>
+                        <h3>Aprenda de verdade</h3>
+                        <p>Liberte-se de aplicativos que lhe fazem associar imagens entediantes com seus significados,
+                            como se você fosse uma criança de 5 anos.</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="logo">
-            <img src="assets\idiomus-footer-pic.png" alt="Logo Idiomus">
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="#">Conteúdo</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Programas</a></li>
-                <li><a href="#">Sobre a Idiomus</a></li>
-            </ul>
-        </div>
-        <div class="newsletter">
-            <h3>Inscreva-se</h3>
-            <p>Junte-se a nossa newsletter e obtenha as últimas notícias do mercado e promoções!</p>
-            <input type="email" placeholder="Seu e-mail">
-            <button class="footer-btn">Inscrever-se</button>
-            <p>Ao se inscrever, você concorda com a nossa Política de Privacidade e provém consentimento para receber atualizações de nossa empresa.</p>
+        <div class="container container__footer">
+            <div class="logo">
+                <img src="assets\idiomus-footer-pic.png" alt="Logo Idiomus">
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Conteúdo</a></li>
+                    <li><a href="#">Livros</a></li>
+                    <li><a href="#">Programas</a></li>
+                    <li><a href="#">Sobre a Idiomus</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Inscreva-se</h3>
+                <p>Junte-se a nossa newsletter e obtenha as últimas notícias do mercado e promoções!</p>
+                <input type="email" placeholder="Seu e-mail">
+                <button class="footer-btn">Inscrever-se</button>
+                <p>Ao se inscrever, você concorda com a nossa Política de Privacidade e provém consentimento para
+                    receber atualizações de nossa empresa.</p>
+            </div>
         </div>
     </footer>
-
 </body>
+
 </html>
