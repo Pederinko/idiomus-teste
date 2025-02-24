@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idiomus</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;600&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
     <header class="navbar">
         <div class="container navbar__container">
             <div class="menu">
                 <div class="logo">
                     <h1 style="display:none">Idiomus</h1>
-                    <a href="#"><img src="assets\logo.png" alt="Logo da Idiomus"></a>
+                    <a href="#"><img src="assets\Idiomus-hor-1.png" alt="Logo da Idiomus"></a>
                 </div>
-                <nav>
+                <nav class="nav-links">
                     <ul>
                         <li><a href="#">Conteúdo</a></li>
                         <li><a href="#">Livros</a></li>
@@ -28,8 +36,14 @@
                 </nav>
             </div>
             <button class="btn-acesso">Acessar Plataforma</button>
+            <!-- Ícone do menu sanduíche -->
+            <div class="menu-icon" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </header>    
 
     <section class="hero">
         <div class="container container__hero">
@@ -50,7 +64,7 @@
     <section class="second-fold">
         <div class="container container__second-fold">
             <div class="left-column">
-                <h2>O mundo mudou. A forma de estudar inglês, também.</h2>
+                <h2>O mundo mudou. <span style="color: #06B1FF;">A forma de estudar inglês, também.</span></h2>
             </div>
             <div class="right-column">
                 <p>Ganhe mais dinheiro, cresça profissionalmente e melhore sua qualidade de vida. <span
@@ -59,13 +73,17 @@
 
                 <section class="columns">
                     <div class="column">
-                        <div class="icon">🗣️</div>
+                        <div class="icon">
+                            <img src="assets\Icon1.svg" alt="Ícone de fala">
+                        </div>
                         <h3>Fluência sem sofrimento</h3>
                         <p>Liberte-se das metodologias tradicionais que transformaram por décadas a jornada da fluência
                             em um processo doloroso, entediante e cansativo.</p>
                     </div>
                     <div class="column">
-                        <div class="icon">📚</div>
+                        <div class="icon">
+                            <img src="assets\Icon1.svg" alt="Ícone de livro">
+                        </div>
                         <h3>Aprenda de verdade</h3>
                         <p>Liberte-se de aplicativos que lhe fazem associar imagens entediantes com seus significados,
                             como se você fosse uma criança de 5 anos.</p>
@@ -78,7 +96,7 @@
     <footer class="footer">
         <div class="container container__footer">
             <div class="logo">
-                <img src="assets\idiomus-footer-pic.png" alt="Logo Idiomus">
+                <img src="assets/idiomus-footer-pic.png" alt="Logo Idiomus">
             </div>
             <div class="links">
                 <ul>
@@ -93,11 +111,24 @@
                 <p>Junte-se a nossa newsletter e obtenha as últimas notícias do mercado e promoções!</p>
                 <input type="email" placeholder="Seu e-mail">
                 <button class="footer-btn">Inscrever-se</button>
-                <p>Ao se inscrever, você concorda com a nossa Política de Privacidade e provém consentimento para
-                    receber atualizações de nossa empresa.</p>
+                <p>Ao se inscrever, você concorda com a nossa Política de Privacidade e provém consentimento para receber atualizações de nossa empresa.</p>
+            </div>
+    
+            <!-- Nova parte dentro do container para não virar coluna -->
+            <div class="footer-bottom-container">
+                <div class="footer-line"></div>
+                <div class="footer-bottom">
+                    <span>2025 Pedro Design. Todos os direitos reservados.</span>
+                    <div class="footer-links">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Privacidade</a>
+                        <a href="#">Configurações de Cookies</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-</body>
+    
+    
 
 </html>

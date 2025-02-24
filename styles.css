@@ -21,6 +21,7 @@ section, footer {
     max-width: 1440px;
     width: 100%;
 }
+/* Estilo do navbar (sem alterações nos estilos existentes) */
 .navbar {
     display: flex;
     width: 100%;
@@ -45,7 +46,6 @@ section, footer {
     height: 100%;
     display: flex;
     align-items: center;
-
 }
 
 .navbar .logo a {
@@ -71,33 +71,84 @@ section, footer {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
-.navbar nav ul li:hover, 
 .navbar nav ul li a:hover {
     color: #06B1FF;
     border-bottom: 2px solid #06B1FF;
-    transform: scale(1.1);
 }
 
 .navbar .btn-acesso {
-    background-color: #0088ff;
+    background: linear-gradient(to right, #06B1FF 70%, #7DFDEB 100%);
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px 0px;
     font-weight: bold;
     font-size: 16px;
 }
 
 .navbar .btn-acesso:hover {
     background-color: #0088ffc8;
+    box-shadow: 0 4px 7.3px rgba(69, 227, 255, 0.644);
 }
 
 .btn-acesso:hover {
     background-color: #0088ffc8;
 }
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        background-color: #0B161D;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .nav-links.active {
+        display: block;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar .nav-links ul {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .btn-acesso {
+        display: none;
+    }
+}
+
 .hero {
     background: linear-gradient(60deg, #013B60, #010102);
 }
@@ -178,6 +229,33 @@ section, footer {
     width: 100%;
     border-radius: 10px;
 }
+@media (max-width: 768px) {
+    .container__hero {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-text .btn-hero {
+        font-size: 16px;
+    }
+}
 
 .second-fold {
     background-color: #0B161D;
@@ -188,6 +266,7 @@ section, footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 .second-fold .left-column {
     width: 50%;
@@ -195,7 +274,10 @@ section, footer {
     align-items: flex-start;
     justify-content: flex-start;
 }
-
+.icon img {
+    width: 50px;
+    height: auto;
+}
 .second-fold .right-column {
     width: 50%;
     display: flex;
@@ -257,16 +339,51 @@ section, footer {
     margin-bottom: 20px;
     color: #7DFDEB;
 }
+@media (max-width: 768px) {
+    .container__second-fold {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .second-fold .left-column,
+    .second-fold .right-column {
+        width: 100%;
+    }
+
+    .columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
+        width: 100%;
+    }
+    
+    .second-fold h2 {
+        font-size: 32px;
+    }
+
+    .second-fold p,
+    .column p {
+        font-size: 16px;
+    }
+
+    .column h3 {
+        font-size: 18px;
+    }
+}
+
+.footer {
+    background: linear-gradient(60deg, #013B60, #010102);
+}
 
 .container__footer {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 4rem 2rem;  
-}
-.footer {
-    background: linear-gradient(60deg, #013B60, #010102);
+    padding: 4rem 5%;  
 }
 
 .footer .logo {
@@ -295,6 +412,10 @@ section, footer {
     text-decoration: none;
 }
 
+.footer .links a:hover {
+    text-decoration: underline;
+}
+
 .footer .newsletter {
     display: flex;
     flex-direction: column;
@@ -318,40 +439,117 @@ section, footer {
 }
 
 .footer .newsletter input {
-    padding: 10px 0px;
+    padding: 10px;
     border-radius: 5px;
     border: none;
     text-indent: 10px;
+    width: 100%;
 }
 
 .footer .newsletter button {
     padding: 10px;
-    background-color: #7DFDEB;
+    background: linear-gradient(to right, #06B1FF 70%, #7DFDEB 100%);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px 0;
     cursor: pointer;
     width: 100%;
+    color: white;
+    transition: background 0.3s ease-in-out;
 }
 
-.footer-btn {
-    background: transparent !important;
-    color: white;
-    border: none;
-    outline: 2px solid white;
-    padding: 10px 20px;
-    border-radius: 10px 0px 10px 0px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-}
 
 .footer .newsletter button:hover {
     background-color: #7dfdecda;
 }
 
-.footer .newsletter input, .footer .newsletter button {
+
+.footer-bottom-container {
     width: 100%;
+    margin-top: 30px; 
+}
+
+.footer-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    color: white;
+    font-size: 14px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-bottom span {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .container__footer {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Alinha todos os itens ao centro */
+        text-align: center;
+        padding: 2rem; /* Ajusta o padding para não ficar colado nas bordas */
+    }
+
+    .footer .logo {
+        width: 50%; /* Ajusta o logo para ocupar 50% da largura no mobile */
+        margin-bottom: 20px; /* Espaço abaixo do logo */
+    }
+
+    .footer .links, 
+    .footer .newsletter {
+        width: 100%; /* Garante que as seções de links e newsletter ocupem toda a largura */
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Organiza a parte inferior em coluna */
+        text-align: center;
+        width: 100%; /* Garante que ocupe 100% da largura */
+        padding: 10px 0; /* Ajuste do padding para melhorar o espaço */
+    }
+
+    .footer-bottom span, 
+    .footer-links {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-line {
+        width: 80%; /* Ajusta a largura da linha separadora */
+        margin: 0 auto; /* Centraliza a linha */
+    }
+
+    .footer .newsletter input,
+    .footer .newsletter button {
+        width: 100%; /* Garante que os campos de input e botão ocupem 100% da largura */
+    }
 }
 
 
