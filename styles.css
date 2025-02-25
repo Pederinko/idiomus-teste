@@ -118,18 +118,19 @@ section, footer {
 
 @media (max-width: 768px) {
     .navbar .nav-links {
-        display: none;
-        width: 100%;
-        background-color: #0B161D;
+        display: none;  /* Não mudar - É o que esconde o menu no mobile */
+        flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 10px 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
         text-align: center;
+        padding: 20px 0;
     }
 
     .navbar .nav-links.active {
-        display: block;
+        display: flex;
     }
 
     .menu-icon {
@@ -138,6 +139,8 @@ section, footer {
 
     .navbar .nav-links ul {
         flex-direction: column;
+        display: flex;
+        gap: 20px;
     }
 
     .navbar .nav-links ul li {
@@ -193,8 +196,8 @@ section, footer {
 }
 
 .hero-text .btn-hero {
-    background: linear-gradient(90deg, #BDFF06, #7DFDEB);
-    color: black;
+    background: linear-gradient(to right, #06B1FF 70%, #7DFDEB 100%);
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -206,7 +209,7 @@ section, footer {
 }
 
 .hero-text .btn-hero:hover {
-    box-shadow: 0 4px 7.3px rgba(174, 255, 113, 0.25); /* Sombra no hover */
+    box-shadow: 0 4px 7.3px rgba(26, 255, 255, 0.678); /* Sombra no hover */
 }
 
 
@@ -511,20 +514,25 @@ section, footer {
 @media (max-width: 768px) {
     .container__footer {
         flex-direction: column; /* Organiza os itens em coluna */
-        align-items: center; /* Alinha todos os itens ao centro */
+        align-items: left; /* Alinha todos os itens ao centro */
         text-align: center;
         padding: 2rem; /* Ajusta o padding para não ficar colado nas bordas */
     }
 
     .footer .logo {
+        align-self: center;
         width: 50%; /* Ajusta o logo para ocupar 50% da largura no mobile */
         margin-bottom: 20px; /* Espaço abaixo do logo */
     }
 
     .footer .links, 
     .footer .newsletter {
-        width: 100%; /* Garante que as seções de links e newsletter ocupem toda a largura */
-        margin-top: 20px;
+        width: 80%; /* Mantém largura */
+        margin: 20px auto; /* Centraliza no container */
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Garante alinhamento vertical */
+        align-items: center; /* Alinha os itens ao centro */
     }
 
     .footer-bottom {
@@ -549,72 +557,5 @@ section, footer {
     .footer .newsletter input,
     .footer .newsletter button {
         width: 100%; /* Garante que os campos de input e botão ocupem 100% da largura */
-    }
-}
-
-
-@media only screen and (max-width: 650px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-    }
-    .navbar .menu .logo {
-        text-align: center;
-    }
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 20px 10px;
-    }
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .second-fold {
-        flex-direction: column;
-    }
-    .second-fold .left-column {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    .second-fold .right-column {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-    .columns {
-        justify-content: space-between;
-    }
-    .footer {
-        display: grid;
-        grid-template-areas:
-            "logo links"
-            "newsletter newsletter";
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .logo {
-        grid-area: logo;
-        width: 100% !important;
-    }
-
-    .links {
-        grid-area: links;
-        width: 100% !important;
-    }
-
-    .newsletter {
-        grid-area: newsletter;
-        width: 100% !important;
     }
 }
