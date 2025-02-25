@@ -21,14 +21,13 @@ section, footer {
     max-width: 1440px;
     width: 100%;
 }
-/* Estilo do navbar (sem alterações nos estilos existentes) */
 .navbar {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     background-color: #0B161D;
-    padding: 1rem 2rem;
+    padding: 4rem 2rem;
     position: relative;
 }
 .navbar__container{
@@ -118,7 +117,7 @@ section, footer {
 
 @media (max-width: 768px) {
     .navbar .nav-links {
-        display: none;  /* Não mudar - É o que esconde o menu no mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -386,7 +385,7 @@ section, footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 4rem 5%;  
+    padding: 4rem 2rem;  
 }
 
 .footer .logo {
@@ -513,33 +512,33 @@ section, footer {
 }
 @media (max-width: 768px) {
     .container__footer {
-        flex-direction: column; /* Organiza os itens em coluna */
-        align-items: left; /* Alinha todos os itens ao centro */
+        flex-direction: column;
+        align-items: left;
         text-align: center;
-        padding: 2rem; /* Ajusta o padding para não ficar colado nas bordas */
+        padding: 2rem;
     }
 
     .footer .logo {
         align-self: center;
-        width: 50%; /* Ajusta o logo para ocupar 50% da largura no mobile */
-        margin-bottom: 20px; /* Espaço abaixo do logo */
+        width: 50%;
+        margin-bottom: 20px;
     }
 
     .footer .links, 
     .footer .newsletter {
-        width: 80%; /* Mantém largura */
-        margin: 20px auto; /* Centraliza no container */
+        width: 80%;
+        margin: 20px auto;
         text-align: center;
         display: flex;
-        flex-direction: column; /* Garante alinhamento vertical */
-        align-items: center; /* Alinha os itens ao centro */
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-bottom {
-        flex-direction: column; /* Organiza a parte inferior em coluna */
+        flex-direction: column;
         text-align: center;
-        width: 100%; /* Garante que ocupe 100% da largura */
-        padding: 10px 0; /* Ajuste do padding para melhorar o espaço */
+        width: 100%;
+        padding: 10px 0;
     }
 
     .footer-bottom span, 
@@ -550,12 +549,12 @@ section, footer {
     }
 
     .footer-line {
-        width: 80%; /* Ajusta a largura da linha separadora */
-        margin: 0 auto; /* Centraliza a linha */
+        width: 80%;
+        margin: 0 auto;
     }
 
     .footer .newsletter input,
     .footer .newsletter button {
-        width: 100%; /* Garante que os campos de input e botão ocupem 100% da largura */
+        width: 100%;
     }
 }
