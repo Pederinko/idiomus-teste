@@ -92,7 +92,7 @@ section, footer {
 
 .navbar .btn-acesso:hover {
     background-color: #0088ffc8;
-    box-shadow: 0 4px 7.3px rgba(69, 227, 255, 0.644);
+    box-shadow: 0 4px 7.3px rgba(2, 6, 8, 0.514);
 }
 
 .btn-acesso:hover {
@@ -195,7 +195,7 @@ section, footer {
 }
 
 .hero-text .btn-hero {
-    background: linear-gradient(to right, #06B1FF 70%, #7DFDEB 100%);
+    background: linear-gradient(to right, #06B1FF 80%, #7DFDEB 100%);
     color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
@@ -208,7 +208,7 @@ section, footer {
 }
 
 .hero-text .btn-hero:hover {
-    box-shadow: 0 4px 7.3px rgba(26, 255, 255, 0.678);
+    box-shadow: 0 4px 7.3px rgba(2, 6, 8, 0.514);
 }
 
 
@@ -297,7 +297,7 @@ section, footer {
     .marquee__inner {
         font-size: 16px;
         letter-spacing: 1px;
-        animation: marquee 6s linear infinite;
+        animation: marquee 25s linear infinite;
     }
 }
 .second-fold {
